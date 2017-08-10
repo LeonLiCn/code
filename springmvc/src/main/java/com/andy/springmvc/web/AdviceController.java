@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.IllegalTransactionStateException;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
 /**
  * Created by dell on 2017/8/7.
@@ -15,5 +16,7 @@ public class AdviceController {
     public String getSomething(@ModelAttribute("msg") String msg, Object o) {
         throw new IllegalArgumentException("参数有误" + "来自@ModelAttribute" + msg);
     }
+
+
 
 }
