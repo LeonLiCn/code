@@ -21,5 +21,6 @@ public class WebInitializer implements WebApplicationInitializer {
         ServletRegistration.Dynamic dynamic = servletContext.addServlet("dispatcher", new DispatcherServlet(ctx));
         dynamic.addMapping("/");
         dynamic.setLoadOnStartup(1);
+        dynamic.setAsyncSupported(true);    //开启异步方法支持
     }
 }
